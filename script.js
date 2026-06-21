@@ -13,6 +13,11 @@ function checkWinner() {
     }
 }
 
+
+function disableButtons() {
+    const buttons = document.querySelectorAll("button[data-choice]");
+    buttons.forEach(btn => btn.disabled = true);
+}
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     console.log("It's a tie!");
@@ -29,6 +34,7 @@ function playRound(humanChoice, computerChoice) {
   }
 
   console.log(`Score — You: ${humanScore}, Computer: ${computerScore}`);
+  checkWinner();
 }
 
 console.log("Hello World!");
@@ -92,4 +98,14 @@ buttons.forEach(button => {
 
     resultDiv.textContent = `You chose ${humanChoice}. Computer chose ${computerChoice}.`;
   });
+});
+document.getElementById("reset").addEventListener("click", () => {
+    humanScore = 0;
+    computerScore = 0;
+    humanScoreSpan.textContent = 0;
+    computerScoreSpan.textContent = 0;
+    resultDiv.textContent = "";
+
+    const buttons = document.querySelectorAll("button[data-choice]");
+    buttons.forEach(btn => btn.disabled = false);
 });
