@@ -102,10 +102,13 @@ buttons.forEach(button => {
 document.getElementById("reset").addEventListener("click", () => {
     humanScore = 0;
     computerScore = 0;
+
     humanScoreSpan.textContent = 0;
     computerScoreSpan.textContent = 0;
+
     resultDiv.textContent = "";
 
     const buttons = document.querySelectorAll("button[data-choice]");
     buttons.forEach(btn => btn.disabled = false);
 });
+

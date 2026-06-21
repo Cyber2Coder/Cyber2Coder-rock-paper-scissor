@@ -21,3 +21,18 @@ body {
   font-size: 22px;
   font-weight: bold;
 }
+
+#reset {
+    margin-top: 20px;      /* moves it down a bit */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: #666;
+}
