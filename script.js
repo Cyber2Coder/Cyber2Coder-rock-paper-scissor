@@ -63,14 +63,7 @@ function game() {
 
 game();
 
-// 1. Variables - Already defined at the top for scores
-
-// 2. Functions
-function getComputerChoice() { ... }
-function getHumanChoice() { ... }
-function playRound(humanChoice, computerChoice) { ... }
-
-// 3. UI wiring (ADD THIS AT THE BOTTOM)
+// ⭐ UI wiring — THIS stays
 const buttons = document.querySelectorAll("#buttons button");
 const humanScoreSpan = document.getElementById("human-score");
 const computerScoreSpan = document.getElementById("computer-score");
@@ -88,4 +81,3 @@ buttons.forEach(button => {
     resultDiv.textContent = `You chose ${humanChoice}. Computer chose ${computerChoice}.`;
   });
 });
-
